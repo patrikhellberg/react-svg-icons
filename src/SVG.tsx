@@ -5,15 +5,22 @@ import { v4 as uuid } from 'uuid'
 type Props = {
   icon: SVGData
   stroke?: string
+  className?: string
+  pathClassName?: string
 }
 
-const SVG = ({ icon, stroke = 'black' }: Props) => {
+const SVG = ({ icon, stroke = 'black', className, pathClassName }: Props) => {
   const { iconName, paths, ...svgProps } = icon
 
   return (
-    <svg {...svgProps}>
-      {paths.map((path, i) => (
-        <path {...path} key={uuid()} stroke={stroke} />
+    <svg {...svgProps} className={className ? className : ''}>
+      {paths.map((path) => (
+        <path
+          {...path}
+          key={uuid()}
+          stroke={stroke}
+          className={pathClassName ? pathClassName : ''}
+        />
       ))}
     </svg>
   )

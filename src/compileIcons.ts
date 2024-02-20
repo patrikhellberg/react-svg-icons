@@ -20,6 +20,7 @@ const compile = () => {
       const d = $(element).attr('d')
       const strokeWidth = $(element).attr('stroke-width')
       const strokeLinecap = $(element).attr('stroke-linecap') as StrokeLineCap
+
       const strokeLinejoin = $(element).attr(
         'stroke-linejoin'
       ) as StrokeLineJoin

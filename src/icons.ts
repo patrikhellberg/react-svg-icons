@@ -1,0 +1,2 @@
+export const ArrowSquareDown = {"iconName":"ArrowSquareDown","paths":[{"d":"M26 5H6C5.44772 5 5 5.44772 5 6V26C5 26.5523 5.44772 27 6 27H26C26.5523 27 27 26.5523 27 26V6C27 5.44772 26.5523 5 26 5Z","strokeWidth":"2","strokeLinecap":"round","strokeLinejoin":"round"},{"d":"M11.7625 16.7625L16 21L20.2375 16.7625","strokeWidth":"2","strokeLinecap":"round","strokeLinejoin":"round"},{"d":"M16 11V21","strokeWidth":"2","strokeLinecap":"round","strokeLinejoin":"round"}],"width":"32","height":"32","viewBox":"0 0 32 32","xmlns":"http://www.w3.org/2000/svg"} 
+

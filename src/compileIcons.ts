@@ -22,7 +22,6 @@ const compile = () => {
     const $ = load(`<div>${iconString}</div>`)
 
     const paths: Path[] = []
-
     $('path').each((_, element) => {
       const d = $(element).attr('d')
       const strokeWidth = $(element).attr('stroke-width')

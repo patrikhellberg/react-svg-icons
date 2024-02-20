@@ -1,0 +1,25 @@
+{
+  "name": "@bm-js/icons",
+  "version": "0.0.0-semantically-released",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "dependencies": {
+    "semantic-release": "^23.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "typescript": "^5.3.3"
+  }
+}

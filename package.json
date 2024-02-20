@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "semantic-release": "semantic-release",
-    "build": "npx tsc"
+    "build": "npx tsc && node dist/compileIcons.js && npx tsc"
   },
   "release": {
     "branches": [
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.19",
+    "cheerio": "^1.0.0-rc.12",
     "typescript": "^5.3.3"
   }
 }

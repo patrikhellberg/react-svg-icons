@@ -7,13 +7,25 @@ type Props = {
   stroke?: string
   className?: string
   pathClassName?: string
+  width?: number
 }
 
-const SVG = ({ icon, stroke = 'black', className, pathClassName }: Props) => {
+const SVG = ({
+  icon,
+  stroke = 'black',
+  className,
+  pathClassName,
+  width,
+}: Props) => {
   const { iconName, paths, ...svgProps } = icon
 
   return (
-    <svg {...svgProps} className={className ? className : ''}>
+    <svg
+      {...svgProps}
+      width={width || svgProps.width}
+      height={width || svgProps.height}
+      className={className ? className : ''}
+    >
       {paths.map((path) => (
         <path
           {...path}

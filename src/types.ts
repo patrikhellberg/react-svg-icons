@@ -15,4 +15,5 @@ export type SVGData = {
   height?: string
   viewBox?: string
   xmlns?: string
+  fill?: string
 }

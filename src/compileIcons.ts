@@ -46,6 +46,7 @@ const compile = () => {
       height,
       viewBox,
       xmlns,
+      fill: 'none',
     }
   })
 

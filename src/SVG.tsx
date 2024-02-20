@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import type { SVGData } from './types'
+import { v4 as uuid } from 'uuid'
 
 type Props = {
   icon: SVGData
@@ -7,14 +8,14 @@ type Props = {
 
 const SVG = ({ icon }: Props) => {
   const { iconName, paths, ...svgProps } = icon
-  const genKey = () => {
-    return `${Math.random() * 1000}`
-  }
+
+  const keys = useMemo(() => {
+    return paths.map(() => uuid())
+  }, [paths])
   return (
     <svg {...svgProps}>
-      <p>Hej</p>
-      {paths.map((path) => (
-        <path {...path} key={genKey()} />
+      {paths.map((path, i) => (
+        <path {...path} key={keys[i]} />
       ))}
     </svg>
   )

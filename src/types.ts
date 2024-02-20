@@ -1,8 +1,11 @@
+export type StrokeLineCap = 'butt' | 'round' | 'square' | 'inherit' | undefined
+export type StrokeLineJoin = 'round' | 'inherit' | 'miter' | 'bevel' | undefined
+
 export type Path = {
   d?: string
   strokeWidth?: string
-  strokeLinecap?: string
-  strokeLinejoin?: string
+  strokeLinecap?: StrokeLineCap
+  strokeLinejoin?: StrokeLineJoin
 }
 
 export type SVGData = {

@@ -6,7 +6,14 @@ type Props = {
 }
 
 const SVG = ({ icon }: Props) => {
-  return <p>{icon.iconName}</p>
+  const { iconName, paths, ...svgProps } = icon
+  return (
+    <svg {...svgProps}>
+      {paths.map((path) => (
+        <path {...path} />
+      ))}
+    </svg>
+  )
 }
 
 export default SVG

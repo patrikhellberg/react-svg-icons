@@ -7,10 +7,14 @@ type Props = {
 
 const SVG = ({ icon }: Props) => {
   const { iconName, paths, ...svgProps } = icon
+  const genKey = () => {
+    return `${Math.random() * 1000}`
+  }
   return (
     <svg {...svgProps}>
+      <p>Hej</p>
       {paths.map((path) => (
-        <path {...path} />
+        <path {...path} key={genKey()} />
       ))}
     </svg>
   )

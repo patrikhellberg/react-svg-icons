@@ -6,6 +6,7 @@ export type Path = {
   strokeWidth?: string
   strokeLinecap?: StrokeLineCap
   strokeLinejoin?: StrokeLineJoin
+  strokeMiterlimit?: string
 }
 
 export type SVGData = {

@@ -19,6 +19,7 @@ const compile = () => {
     $('path').each((_, element) => {
       const d = $(element).attr('d')
       const strokeWidth = $(element).attr('stroke-width')
+      const strokeMiterlimit = $(element).attr('stroke-miterlimit')
       const strokeLinecap = $(element).attr('stroke-linecap') as StrokeLineCap
 
       const strokeLinejoin = $(element).attr(
@@ -31,6 +32,7 @@ const compile = () => {
       if (strokeWidth) pathObject.strokeWidth = strokeWidth
       if (strokeLinecap) pathObject.strokeLinecap = strokeLinecap
       if (strokeLinejoin) pathObject.strokeLinejoin = strokeLinejoin
+      if (strokeMiterlimit) pathObject.strokeMiterlimit = strokeMiterlimit
 
       paths.push(pathObject)
     })
@@ -53,9 +55,7 @@ const compile = () => {
 
   let objectString = ``
   compiledIcons.forEach((icon) => {
-    objectString += `export const ${icon.iconName} = ${JSON.stringify(
-      icon
-    )} \n\n`
+    objectString += `export const ${icon.iconName} = ${JSON.stringify(icon)} \n`
   })
 
   fs.writeFileSync(destinationPath, objectString)

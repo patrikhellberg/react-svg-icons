@@ -1,13 +1,7 @@
 import fs from 'fs'
 import path from 'path'
+import type { Path } from './types'
 import { load } from 'cheerio'
-
-type Path = {
-  d?: string
-  strokeWidth?: string
-  strokeLinecap?: string
-  strokeLinejoin?: string
-}
 
 const compile = () => {
   const iconsPath = path.resolve(__dirname, '..', 'svgSrc')

@@ -1,4 +1,3 @@
 import SVG from './SVG'
-
 export * from './icons'
-export { SVG }
+export default SVG

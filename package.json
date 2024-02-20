@@ -17,12 +17,12 @@
     "access": "restricted"
   },
   "dependencies": {
-    "@types/uuid": "^9.0.8",
     "react": "^18.2.0",
-    "semantic-release": "^23.0.2",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "semantic-release": "^23.0.2",
+    "@types/uuid": "^9.0.8",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.57",
     "cheerio": "^1.0.0-rc.12",

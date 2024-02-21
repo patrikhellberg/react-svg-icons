@@ -3,6 +3,10 @@ import path from 'path'
 import type { Path, StrokeLineCap, StrokeLineJoin } from './types'
 import { load } from 'cheerio'
 
+const renameMap: { [key: string]: string } = {
+  Path: 'SPath',
+}
+
 const compile = () => {
   const iconsPath = path.resolve(__dirname, '..', 'svgSrc')
   const destinationPath = path.resolve(__dirname, '..', 'src', 'icons.ts')
@@ -11,7 +15,9 @@ const compile = () => {
 
   const compiledIcons = icons.map((iconPathName) => {
     const iconPath = path.resolve(iconsPath, iconPathName)
-    const iconName = iconPathName.replace('.svg', '')
+    let iconName = iconPathName.replace('.svg', '')
+    if (renameMap[iconName]) iconName = renameMap[iconName]
+
     const iconString = fs.readFileSync(iconPath, { encoding: 'utf-8' })
     const $ = load(`<div>${iconString}</div>`)
 

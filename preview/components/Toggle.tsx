@@ -22,8 +22,15 @@ const Toggle = ({
   unCheckedLabel,
 }: Props) => {
   return (
-    <label htmlFor={id} className='cursor-pointer'>
+    <label htmlFor={id} className='cursor-pointer flex gap-4 items-center'>
       <p>{checked ? checkedLabel : unCheckedLabel}</p>
+      <span className='h-4 w-8 border border-solid border-gray-600 rounded-full relative'>
+        <span
+          className={` transition-all h-3 w-3 rounded-full bg-black dark:bg-slate-500 absolute top-px ${
+            checked ? 'left-4' : 'left-px'
+          }`}
+        />
+      </span>
       <input
         className='hidden'
         type='checkbox'

@@ -1,6 +1,5 @@
 import SVG from './SVG'
-import * as icons from './icons'
-
+import type { SVGData } from './types'
 export * from './icons'
+export { SVGData }
 export default SVG
-export const iconKeys = Object.keys(icons)

@@ -19,15 +19,16 @@
     "access": "restricted"
   },
   "dependencies": {
+    "@bm-js/icons": "^1.0.17",
     "react": "^18.2.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "semantic-release": "^23.0.2",
-    "@types/uuid": "^9.0.8",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.57",
+    "@types/uuid": "^9.0.8",
     "cheerio": "^1.0.0-rc.12",
+    "semantic-release": "^23.0.2",
     "typescript": "^5.3.3"
   }
 }

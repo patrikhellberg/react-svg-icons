@@ -8,7 +8,7 @@
     "semantic-release": "semantic-release",
     "build": "npx tsc && node dist/compileIcons.js && npx tsc",
     "prepare-preview-icons": "rm -rf preview/public/svgSrc && cp -r svgSrc preview/public",
-    "build-frontend": "npm run prepare-preview-icons && cd preview && npm run build",
+    "build-frontend": "npm run prepare-preview-icons && cd preview && npm ci && npm run build",
     "frontend": "npm run prepare-preview-icons && cd preview && npm run dev"
   },
   "release": {

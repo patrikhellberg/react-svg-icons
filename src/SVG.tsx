@@ -8,6 +8,7 @@ type Props = {
   className?: string
   pathClassName?: string
   width?: number
+  onClick?: any
 }
 
 const SVG = ({

@@ -1,15 +1,12 @@
-// import {} from "@bm-js/icons"
-
-import SVG, { iconKeys } from '@bm-js/icons'
+import SVG, { IconKey } from '@bm-js/icons'
 import * as icons from '@bm-js/icons'
 
 type Props = {
-  iconKey: keyof typeof icons
+  iconKey: IconKey
 }
 
 const IconCard = ({ iconKey }: Props) => {
-  //   return <SVG icon={icons[iconKey]}/>
-  return <p></p>
+  return <SVG icon={icons[iconKey]} />
 }
 
 export default IconCard

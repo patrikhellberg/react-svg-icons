@@ -1,26 +1,27 @@
-import SVG, {
-  IconKey,
-  Download,
-  ArrowSquareUpRight,
-  LinkSimple,
-} from '@bm-js/icons'
+import SVG, { IconKey, Download, ArrowSquareUpRight } from '@bm-js/icons'
 import * as icons from '@bm-js/icons'
 import CopyLink from './CopyLink'
+import { useContext } from 'react'
+import { AppContext } from './Context'
 
 type Props = {
   iconKey: IconKey
 }
 
 const IconCard = ({ iconKey }: Props) => {
+  const {
+    state: { color, size },
+  } = useContext(AppContext)
+
   const actionIconSize = 24
 
   const iconLink = `/svgSrc/${iconKey}.svg`
 
   return (
     <div className='border border-solid border-gray-400 rounded text-center'>
-      <div className='border-b border-solid border-gray-400 flex justify-center items-center min-h-[100px] flex-col'>
-        <SVG icon={icons[iconKey]} />
-        <p className=''>{iconKey}</p>
+      <div className='border-b border-solid border-gray-400 flex justify-center items-center pt-8 pb-2 flex-col'>
+        <SVG icon={icons[iconKey]} stroke={color} width={size} />
+        <p className='mt-4'>{iconKey}</p>
       </div>
       <div className='p-4'>
         <div className='flex justify-around'>

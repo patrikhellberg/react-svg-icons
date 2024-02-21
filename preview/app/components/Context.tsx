@@ -2,17 +2,21 @@ import { Dispatch, PropsWithChildren, createContext, useReducer } from 'react'
 
 type AppState = {
   q: string
+  color: string
+  size: number
 }
 
-type ActionType = 'SEARCH'
+type ActionType = 'SEARCH' | 'COLOR' | 'SIZE'
 
 type AppAction = {
   type: ActionType
   data: any
 }
 
-const initialState = {
+const initialState: AppState = {
   q: '',
+  color: '#000000',
+  size: 40,
 }
 
 export const AppContext = createContext<{
@@ -29,6 +33,16 @@ const reducer = (state: AppState, action: AppAction) => {
       return {
         ...state,
         q: action.data,
+      }
+    case 'COLOR':
+      return {
+        ...state,
+        color: action.data,
+      }
+    case 'SIZE':
+      return {
+        ...state,
+        size: action.data,
       }
     default:
       return state

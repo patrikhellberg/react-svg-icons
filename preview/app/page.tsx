@@ -3,14 +3,14 @@
 import ContentContainer from './components/ContentContainer'
 import Context from './components/Context'
 import IconResults from './components/IconResults'
-import SearchBar from './components/SearchBar'
+import Toolbar from './components/Toolbar'
 
 const IndexPage = () => {
   return (
     <ContentContainer>
       <Context>
         <div className='pt-24'>
-          <SearchBar />
+          <Toolbar />
           <IconResults />
         </div>
       </Context>

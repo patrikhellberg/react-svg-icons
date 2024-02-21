@@ -7,8 +7,9 @@
   "scripts": {
     "semantic-release": "semantic-release",
     "build": "npx tsc && node dist/compileIcons.js && npx tsc",
-    "build-frontend": "echo 'todo'",
-    "frontend": "rm -rf preview/public/svgSrc && cp -r svgSrc preview/public && cd preview && npm run dev"
+    "prepare-preview-icons": "rm -rf preview/public/svgSrc && cp -r svgSrc preview/public",
+    "build-frontend": "npm run prepare-preview-icons && cd preview && npm run build",
+    "frontend": "npm run prepare-preview-icons && cd preview && npm run dev"
   },
   "release": {
     "branches": [

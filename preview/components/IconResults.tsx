@@ -1,3 +1,5 @@
+'use client'
+
 import { iconKeys } from '@bm-js/icons'
 import IconCard from './IconCard'
 import { useContext, useMemo } from 'react'
@@ -10,7 +12,7 @@ const IconResults = () => {
 
   const filteredIconKeys = useMemo(() => {
     return iconKeys.filter((key) => {
-      return key.includes(q)
+      return key.toLowerCase().includes(q.toLowerCase())
     })
   }, [q, iconKeys])
 

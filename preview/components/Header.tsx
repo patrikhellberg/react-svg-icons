@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Header = () => {
   return (
     <header className='bg-gray-500 text-white h-16 px-4 flex items-center justify-between fixed top-0 left-0 right-0'>
-      <div>
+      <Link href='/'>
         <Image
           priority
           className='w-auto h-8'
@@ -12,7 +13,7 @@ const Header = () => {
           width={65}
           height={20}
         />
-      </div>
+      </Link>
       <h1 className='hidden sm:inline font-semibold text-lg'>Icon library</h1>
       <div>
         <p>Dark mode toggle</p>

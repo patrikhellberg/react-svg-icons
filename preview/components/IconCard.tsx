@@ -1,8 +1,14 @@
-import SVG, { IconKey, Download, ArrowSquareUpRight } from '@bm-js/icons'
+import SVG, {
+  IconKey,
+  Download,
+  ArrowSquareUpRight,
+  DotsThreeCircle,
+} from '@bm-js/icons'
 import * as icons from '@bm-js/icons'
 import CopyLink from './CopyLink'
 import { useContext } from 'react'
 import { AppContext } from './Context'
+import Link from 'next/link'
 
 type Props = {
   iconKey: IconKey
@@ -38,6 +44,9 @@ const IconCard = ({ iconKey }: Props) => {
           <a href={iconLink} target='_blank' rel='noreferrer' title='Open'>
             <SVG icon={ArrowSquareUpRight} width={actionIconSize} />
           </a>
+          <Link href={`/${iconKey}`} title='Details'>
+            <SVG icon={DotsThreeCircle} width={actionIconSize} />
+          </Link>
         </div>
       </div>
     </div>

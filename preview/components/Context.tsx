@@ -1,12 +1,15 @@
+'use client'
+
 import { Dispatch, PropsWithChildren, createContext, useReducer } from 'react'
 
 type AppState = {
   q: string
   color: string
   size: number
+  darkMode: boolean
 }
 
-type ActionType = 'SEARCH' | 'COLOR' | 'SIZE'
+type ActionType = 'SEARCH' | 'COLOR' | 'SIZE' | 'DARK'
 
 type AppAction = {
   type: ActionType
@@ -17,6 +20,7 @@ const initialState: AppState = {
   q: '',
   color: '#000000',
   size: 40,
+  darkMode: true,
 }
 
 export const AppContext = createContext<{
@@ -43,6 +47,11 @@ const reducer = (state: AppState, action: AppAction) => {
       return {
         ...state,
         size: action.data,
+      }
+    case 'DARK':
+      return {
+        ...state,
+        darkMode: action.data,
       }
     default:
       return state

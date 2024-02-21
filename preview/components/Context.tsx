@@ -20,7 +20,7 @@ const initialState: AppState = {
   q: '',
   color: '#000000',
   size: 40,
-  darkMode: true,
+  darkMode: false,
 }
 
 export const AppContext = createContext<{

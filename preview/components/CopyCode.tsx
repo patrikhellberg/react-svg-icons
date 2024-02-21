@@ -20,7 +20,7 @@ const CopyCode = ({ code }: Props) => {
     <button
       title='Copy code'
       onClick={handleCopy}
-      className='border border-solid border-black rounded font-medium px-6 py-2'
+      className='border border-solid border-black dark:border-slate-500 rounded font-medium px-6 py-2'
     >
       {hasCopied ? 'Copied code' : 'Copy code'}
     </button>

@@ -22,7 +22,11 @@ const CopyLink = ({ width, link }: Props) => {
 
   return (
     <button title='Copy link' onClick={handleCopy}>
-      <SVG icon={hasCopied ? CheckCircle : LinkSimple} width={width} />
+      <SVG
+        icon={hasCopied ? CheckCircle : LinkSimple}
+        width={width}
+        pathClassName='dark:stroke-slate-500'
+      />
     </button>
   )
 }

@@ -17,7 +17,7 @@ const IconResults = () => {
   }, [q, iconKeys])
 
   return (
-    <div className='my-8'>
+    <div className='py-8 dark:text-slate-500'>
       <p className='mb-4'>
         Visar {filteredIconKeys.length} av {iconKeys.length} resultat
       </p>

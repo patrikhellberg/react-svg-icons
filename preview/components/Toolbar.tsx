@@ -24,7 +24,7 @@ const Toolbar = () => {
   }
 
   return (
-    <div className='bg-gray-400 p-4 rounded flex gap-4 md:flex-row flex-col'>
+    <div className='bg-white dark:bg-slate-900 p-4 rounded flex gap-4 md:flex-row flex-col border border-solid border-gray-500 dark:text-white transition-colors'>
       <Input
         label='Search icon name'
         id='q'

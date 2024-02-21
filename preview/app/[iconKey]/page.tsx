@@ -22,7 +22,7 @@ export const generateStaticParams = () => {
 
 const IconPage = async ({ params: { iconKey } }: Props) => {
   const icon = icons[iconKey]
-  const borderBottom = 'border-b border-solid border-gray-300'
+  const borderBottom = 'border-b border-solid border-gray-500'
 
   const iconData = (plainText?: boolean) => {
     const strings = ['<svg ']
@@ -52,16 +52,16 @@ const IconPage = async ({ params: { iconKey } }: Props) => {
 
   return (
     <PageLayout>
-      <div className='border border-solid border-gray-300 rounded'>
+      <div className='border border-solid border-gray-500 rounded dark:text-slate-300'>
         <div className={`p-4 ${borderBottom}`}>
           <h1 className='text-xl font-semibold '>{icon.iconName}</h1>
         </div>
         <div className={`flex items-center justify-center p-8 ${borderBottom}`}>
-          <SVG icon={icon} width={400} />
+          <SVG icon={icon} width={400} pathClassName='dark:stroke-white' />
         </div>
         <div className='p-4'>
           <p className='font-medium mb-2'>SVG code</p>
-          <code className='bg-gray-200 p-4 block mb-4 rounded'>
+          <code className='bg-gray-200 p-4 block mb-4 rounded dark:bg-slate-900'>
             {(iconData() as string[]).map((str, i) => (
               <span
                 key={`str_${str}_${i}`}

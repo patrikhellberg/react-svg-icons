@@ -2,7 +2,7 @@ import ContentContainer from './ContentContainer'
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-500 text-white py-10 text-sm'>
+    <footer className='bg-white-500 dark:bg-slate-900 dark:text-slate-500 py-10 text-sm'>
       <ContentContainer>
         <p>
           Website created by ©
@@ -16,7 +16,7 @@ const Footer = () => {
           </a>{' '}
           {new Date().getFullYear()}
         </p>
-        <p>Icons created by John Itebu for moja UI.</p>
+        <p>Icons created by John Itebu for moja UI</p>
       </ContentContainer>
     </footer>
   )

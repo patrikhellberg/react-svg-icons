@@ -1,5 +1,6 @@
+// import type { SVGData } from './types'
+import * as icons from './icons'
 import SVG from './SVG'
-import type { SVGData } from './types'
-export * from './icons'
-export { SVGData }
+
+export * from './types'
 export default SVG

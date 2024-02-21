@@ -53,9 +53,11 @@ const compile = () => {
     }
   })
 
-  let objectString = ``
+  let objectString = `import {SVGData} from './types'\n\n`
   compiledIcons.forEach((icon) => {
-    objectString += `export const ${icon.iconName} = ${JSON.stringify(icon)} \n`
+    objectString += `export const ${icon.iconName}:SVGData = ${JSON.stringify(
+      icon
+    )} \n`
   })
 
   fs.writeFileSync(destinationPath, objectString)

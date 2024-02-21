@@ -6,7 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "semantic-release": "semantic-release",
-    "build": "npx tsc && node dist/compileIcons.js && npx tsc"
+    "build": "npx tsc && node dist/compileIcons.js && npx tsc",
+    "build-frontend": "echo 'todo'",
+    "frontend": "rm -rf preview/public/svgSrc && cp -r svgSrc preview/public && cd preview && npm run dev"
   },
   "release": {
     "branches": [

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "prepare-preview-icons": "rm -rf public/svgSrc && cp -r ../svgSrc public",
+    "build": "npm run prepare-preview-icons && next build",
     "start": "next start",
     "lint": "next lint"
   },

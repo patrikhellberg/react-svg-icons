@@ -1,7 +1,7 @@
 import CopyCode from '@/components/CopyCode'
 import PageLayout from '@/components/PageLayout'
-import SVG, { IconKey, iconKeys } from '@bm-js/icons'
-import * as icons from '@bm-js/icons'
+import SVG, { IconKey, iconKeys } from '@hellberg/react-svg-icons'
+import * as icons from '@hellberg/react-svg-icons'
 import { Metadata } from 'next'
 
 type Props = {

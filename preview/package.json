@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@hellberg/react-svg-icons": "^1.1.0",
+    "@hellberg/react-svg-icons": "^1.1.2",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"

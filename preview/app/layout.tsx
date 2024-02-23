@@ -6,9 +6,9 @@ import Context from '../components/Context'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Icons | Bucket Media',
+  title: 'React SVG Icons | Preview',
   description:
-    'A preview of icons available in @bm-js/icons. Icons created by John Itebu for moja UI.',
+    'A preview of icons available in @hellberg/react-svg-icons. Icons created by John Itebu for moja UI.',
 }
 
 export default function RootLayout({

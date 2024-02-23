@@ -1,5 +1,5 @@
 {
-  "name": "@bm-js/icons",
+  "name": "@hellberg/react-svg-icons",
   "version": "0.0.0-semantically-released",
   "description": "",
   "main": "dist/index.js",

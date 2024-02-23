@@ -8,11 +8,11 @@ const Footer = () => {
           Website created by ©
           <a
             className='underline'
-            href='https://bucketmedia.se'
+            href='https://hellberg.io'
             target='_blank'
             rel='noreferrer'
           >
-            Bucket Media AB
+            Patrik Hellberg
           </a>{' '}
           {new Date().getFullYear()}
         </p>

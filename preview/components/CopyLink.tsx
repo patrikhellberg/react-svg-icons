@@ -1,6 +1,6 @@
 'use client'
 
-import SVG, { LinkSimple, CheckCircle } from '@bm-js/icons'
+import SVG, { LinkSimple, CheckCircle } from '@hellberg/react-svg-icons'
 import { useState } from 'react'
 import { appUrl } from '../utils/config'
 

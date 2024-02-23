@@ -1,6 +1,6 @@
 'use client'
 
-import { iconKeys } from '@bm-js/icons'
+import { iconKeys } from '@hellberg/react-svg-icons'
 import IconCard from './IconCard'
 import { useContext, useMemo } from 'react'
 import { AppContext } from './Context'
@@ -14,7 +14,7 @@ const IconResults = () => {
     return iconKeys.filter((key) => {
       return key.toLowerCase().includes(q.toLowerCase())
     })
-  }, [q, iconKeys])
+  }, [q])
 
   return (
     <div className='py-8 dark:text-slate-500'>

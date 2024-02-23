@@ -3,8 +3,8 @@ import SVG, {
   Download,
   ArrowSquareUpRight,
   DotsThreeCircle,
-} from '@bm-js/icons'
-import * as icons from '@bm-js/icons'
+} from '@hellberg/react-svg-icons'
+import * as icons from '@hellberg/react-svg-icons'
 import CopyLink from './CopyLink'
 import { useContext } from 'react'
 import { AppContext } from './Context'

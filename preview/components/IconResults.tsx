@@ -19,7 +19,7 @@ const IconResults = () => {
   return (
     <div className='py-8 dark:text-slate-500'>
       <p className='mb-4'>
-        Visar {filteredIconKeys.length} av {iconKeys.length} resultat
+        Showing {filteredIconKeys.length} of {iconKeys.length} icons
       </p>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
         {filteredIconKeys.map((key) => (

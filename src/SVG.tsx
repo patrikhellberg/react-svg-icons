@@ -21,6 +21,7 @@ const SVG = ({
 }: Props) => {
   if (!icon) {
     console.warn('Icon prop missing!')
+    return null
   }
   const { iconName, paths, ...svgProps } = icon
 

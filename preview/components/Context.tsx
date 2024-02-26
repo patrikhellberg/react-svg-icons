@@ -1,7 +1,15 @@
 'use client'
 
 import { hasSufficientContrast } from '@/utils/colors'
-import { Dispatch, PropsWithChildren, createContext, useReducer } from 'react'
+import { LOCAL_STORAGE_KEY } from '@/utils/config'
+import {
+  Dispatch,
+  PropsWithChildren,
+  createContext,
+  useEffect,
+  useReducer,
+  useState,
+} from 'react'
 
 type AppState = {
   q: string
@@ -10,7 +18,7 @@ type AppState = {
   darkMode: boolean
 }
 
-type ActionType = 'SEARCH' | 'COLOR' | 'SIZE' | 'DARK'
+type ActionType = 'SEARCH' | 'COLOR' | 'SIZE' | 'DARK' | 'POPULATE_FROM_STORAGE'
 
 type AppAction = {
   type: ActionType
@@ -64,13 +72,30 @@ const reducer = (state: AppState, action: AppAction) => {
         darkMode: action.data,
         color: nextColor,
       }
+    case 'POPULATE_FROM_STORAGE':
+      return { ...state, ...action.data }
     default:
       return state
   }
 }
 
 const Context = ({ children }: PropsWithChildren) => {
+  const [isInitialLoad, setIsInitialLoad] = useState(true)
   const [state, dispatch] = useReducer(reducer, initialState)
+
+  useEffect(() => {
+    const storage = localStorage.getItem(LOCAL_STORAGE_KEY)
+    if (isInitialLoad) {
+      if (storage) {
+        dispatch({ type: 'POPULATE_FROM_STORAGE', data: JSON.parse(storage) })
+      }
+      setIsInitialLoad(false)
+    }
+    if (!isInitialLoad) {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state))
+    }
+  }, [state, isInitialLoad])
+
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       {children}

@@ -6,7 +6,7 @@ import Context from '../components/Context'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'React SVG Icons | Preview',
+  title: 'React SVG Icons',
   description:
     'A preview of icons available in @hellberg/react-svg-icons. Icons created by John Itebu for moja UI.',
 }

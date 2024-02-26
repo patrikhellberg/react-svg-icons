@@ -12,7 +12,7 @@ type Props = {
 
 export const generateMetadata = ({ params: { iconKey } }: Props): Metadata => {
   return {
-    title: `${iconKey} | Icons | Bucket Media`,
+    title: `${iconKey} | React SVG Icons`,
   }
 }
 

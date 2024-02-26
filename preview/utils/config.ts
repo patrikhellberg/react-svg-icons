@@ -1,4 +1,4 @@
 export const appUrl =
   process.env.NODE_ENV === 'production'
-    ? 'https://icons.bucketmedia.se'
+    ? 'https://icons.hellberg.io'
     : 'http://localhost:3000'

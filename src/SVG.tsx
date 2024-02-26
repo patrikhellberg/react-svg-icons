@@ -17,12 +17,14 @@ const SVG = ({
   className,
   pathClassName,
   width,
+  onClick,
 }: Props) => {
   const { iconName, paths, ...svgProps } = icon
 
   return (
     <svg
       {...svgProps}
+      onClick={onClick}
       width={width || svgProps.width}
       height={width || svgProps.height}
       className={className ? className : ''}

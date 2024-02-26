@@ -1,5 +1,6 @@
 'use client'
 
+import { hasSufficientContrast } from '@/utils/colors'
 import { Dispatch, PropsWithChildren, createContext, useReducer } from 'react'
 
 type AppState = {
@@ -49,9 +50,19 @@ const reducer = (state: AppState, action: AppAction) => {
         size: action.data,
       }
     case 'DARK':
+      let nextColor = state.color
+      const nextBackground = action.data ? '#000000' : '#f3f4f6'
+      const shouldUpdateNextColor = !hasSufficientContrast(
+        state.color,
+        nextBackground
+      )
+      if (shouldUpdateNextColor) {
+        nextColor = action.data ? '#FFFFFF' : '#000000'
+      }
       return {
         ...state,
         darkMode: action.data,
+        color: nextColor,
       }
     default:
       return state

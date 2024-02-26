@@ -23,6 +23,12 @@ const SVG = ({
     console.warn('Icon prop missing!')
     return null
   }
+
+  if (!Array.isArray(icon.paths)) {
+    console.warn('Invalid icon prop!')
+    return null
+  }
+
   const { iconName, paths, ...svgProps } = icon
 
   return (

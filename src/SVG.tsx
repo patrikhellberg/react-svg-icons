@@ -19,6 +19,7 @@ const SVG = ({
   width,
   onClick,
 }: Props) => {
+  if (!icon) return null
   const { iconName, paths, ...svgProps } = icon
 
   return (

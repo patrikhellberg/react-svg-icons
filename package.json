@@ -19,7 +19,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@bm-js/atlas-analytics": "^1.6.5",
     "react": "^18.2.0",
     "uuid": "^9.0.1"
   },
